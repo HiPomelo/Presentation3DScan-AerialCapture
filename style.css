@@ -3,6 +3,7 @@
     --negro-suave: #1a1a1a;
     --dorado: #D4AF37;
     --dorado-brillante: #f1c40f;
+    --gold-grad: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
     --blanco: #ffffff;
 }
 
@@ -106,7 +107,43 @@ nav ul li a:hover {
     color: var(--negro-puro);
 }
 
-/* --- MAIN --- */
+/* --- Services --- */
+#services {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 100px 10%;
+    background: var(--negro-suave);
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    padding: 40px;
+    width: 250px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    background: rgba(212, 175, 55, 0.05);
+    border-color: var(--gold-solid);
+    transform: translateY(-10px);
+}
+
+.service-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* --- Projects --- */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 80px 0 40px;
+}
+
 #projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -180,4 +217,12 @@ footer {
 .copyright {
     font-size: 0.7rem;
     opacity: 0.5;
+}
+
+/* Extra */
+.gold-text {
+    background: var(--gold-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
 }
