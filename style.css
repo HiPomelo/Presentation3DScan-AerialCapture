@@ -267,6 +267,125 @@ footer {
     letter-spacing: 1px;
 }
 
+/* --- ESTILOS DE CONTACTO --- */
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px 100px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    background: var(--negro-suave);
+    padding: 50px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.contact-info h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    margin-top: 30px;
+}
+
+.info-item span {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 12px;
+    color: var(--blanco);
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: var(--dorado);
+}
+
+/* Estilo base del select */
+.contact-form select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 12px;
+    color: var(--blanco);
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    appearance: none; /* Elimina la flecha por defecto en algunos navegadores */
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Estilo de las opciones (cuando el desplegable está abierto) */
+.contact-form select option {
+    background-color: var(--negro-suave); /* Fondo oscuro para el desplegable */
+    color: var(--blanco);                 /* Letras blancas */
+    padding: 10px;
+}
+
+/* Hover en las opciones (Nota: El soporte de CSS para option:hover es limitado, 
+   pero el navegador suele adaptarse al color del select) */
+.contact-form select:focus {
+    border-color: var(--dorado);
+    background-color: var(--negro-puro);
+}
+
+.form-group:has(select)::after {
+    content: '▼';
+    font-size: 0.7rem;
+    color: var(--dorado);
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    pointer-events: none;
+}
+
+.contact-form button {
+    cursor: pointer;
+    background: transparent;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+}
+
 /* Extra */
 .gold-text {
     background: var(--gold-grad);
